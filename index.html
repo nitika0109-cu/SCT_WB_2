@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CalcoraX - Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-animation"></canvas>
+
+  <header class="navbar">
+    <div class="logo">🧮 Calcora<span>X</span></div>
+    <button id="theme-toggle" class="theme-btn">🌗 Toggle Theme</button>
+    <button id="animation-toggle" class="theme-btn">🎨 Change Animation</button>
+  </header>
+
+  <main class="calculator-container fade-in">
+    <div class="calculator glass">
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <!-- Standard buttons -->
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn operator">/</button>
+
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn operator">*</button>
+
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn operator">-</button>
+
+        <button class="btn">0</button>
+        <button class="btn">.</button>
+        <button class="btn" id="clear">C</button>
+        <button class="btn operator">+</button>
+
+        <!-- Scientific functions -->
+        <button class="btn sci-fn">sin</button>
+        <button class="btn sci-fn">cos</button>
+        <button class="btn sci-fn">tan</button>
+        <button class="btn sci-fn">√</button>
+        <button class="btn sci-fn">log</button>
+        <button class="btn sci-fn">^</button>
+
+        <button class="btn equal" id="equals">=</button>
+      </div>
+
+      <div class="history">
+        <h3>History</h3>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer fade-in">
+    <p>© 2025 <strong>CalcoraX</strong></p>
+  </footer>
+
+  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
